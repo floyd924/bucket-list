@@ -5,11 +5,13 @@ const createRouter = function(collection) {
 
   const router = express.Router();
 
+console.log("HERE IS THE LOG", collection);
+
 //INDEX
   router.get('/', (req, res) => {
     collection
     .find()
-    .toArray();
+    .toArray()
     .then( (docs) => res.json(docs) )
     .catch( (err) => {
       console.error(err);
