@@ -12,6 +12,10 @@ const Wishes = function(url) {
 };
 
   Wishes.prototype.bindEvents = function () {
+    PubSub.subscribe('WishView:delete-clicked', (event) => {
+      this.deleteWish(event.detail);
+    });
+
     PubSub.subscribe('WishesFormView:wish-submitted', (event) => {
       // console.log("Received", event.detail);
       this.postWish(event.detail);
@@ -32,6 +36,13 @@ const Wishes = function(url) {
     .then( (docs) => {
       PubSub.publish('Wishes:data-loaded', docs);
     })
+    .catch(console.error);
+  };
+
+  Wishes.prototype.deleteWish = function (wishId) {
+    this.request.delete(wishId)
+    .then( (wishes) => {PubSub.publish('Wishes:data-loaded', wishes);
+  })
     .catch(console.error);
   };
 

@@ -5,9 +5,7 @@ const createRouter = function(collection) {
 
   const router = express.Router();
 
-console.log("HERE IS THE LOG", collection);
-
-//INDEX
+  //INDEX
   router.get('/', (req, res) => {
     collection
     .find()

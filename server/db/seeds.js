@@ -10,7 +10,7 @@ db.wishes.insertMany([
   {
     name: "Visit New Zealand",
     location: "New Zealand",
-    image_url: "https://farm1.nzstatic.com/_proxy/imageproxy_1y/serve/milford-sound.jpg?focalpointx=61&focalpointy=52&height=427&outputformat=jpg&quality=85&source=3097492&transformationsystem=focalpointcrop&width=640&securitytoken=DEDF8293A96FD582A28F2103F0F80B86"
+    image_url: "https://www.aboutaustralia.com/wp-content/uploads/2011/09/newzealand.jpg"
   },
   {
     name: "US road trip",

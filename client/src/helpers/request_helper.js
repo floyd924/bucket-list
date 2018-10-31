@@ -12,16 +12,16 @@ RequestHelper.prototype.get = function () {
 
 //show
 //this should work but we don't know for sure
-RequestHelper.prototype.get = function (id) {
-  return fetch (`${this.url}/${id}`)
-    .then((response) => response.json())
-};
+// RequestHelper.prototype.getID = function (id) {
+//   return fetch(`${this.url}/${id}`)
+//     .then((response) => response.json())
+// };
 
 
 
 //create
 RequestHelper.prototype.post = function (payload) {
-  return fetch (this.url, {
+  return fetch(this.url, {
     method: 'POST',
     body: JSON.stringify(payload),
     headers: {'Content-Type': 'application/json'}
@@ -33,15 +33,15 @@ RequestHelper.prototype.post = function (payload) {
 
 //update
 //should work, but we dont know for sure
-RequestHelper.prototype.put = function (id, payload) {
-  return fetch(`${this.url}/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify(payload),
-    headers: {'Content-Type': 'application/json'}
-  })
-  .then((response) => response.json());
-
-};
+// RequestHelper.prototype.put = function (id, payload) {
+//   return fetch(`${this.url}/${id}`, {
+//     method: 'PUT',
+//     body: JSON.stringify(payload),
+//     headers: {'Content-Type': 'application/json'}
+//   })
+//   .then((response) => response.json());
+// 
+// };
 
 
 

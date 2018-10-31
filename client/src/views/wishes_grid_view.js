@@ -4,7 +4,7 @@ const PubSub = require('../helpers/pub_sub.js');
 const WishView = require('./wishes_view.js');
 
 const WishesGridView = function (container) {
-  this.contianer = container;
+  this.container = container;
 };
 
 WishesGridView.prototype.bindEvents = function () {
@@ -14,7 +14,7 @@ WishesGridView.prototype.bindEvents = function () {
 };
 
 WishesGridView.prototype.render = function (wishes) {
-  this.container.innerHTML = "";
+  this.container.innerHTML = '';
   const wishView = new WishView(this.container);
   wishes.forEach((wish) => wishView.render(wish));
 
